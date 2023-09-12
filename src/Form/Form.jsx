@@ -33,13 +33,9 @@ if (!values.password) {
   return errors;
 };
 
-const Form = (values) => {
-
-    const [isLogInSuccessful, setIsLogInSuccessful] = useState(false)
-    const [loggedInUserName, setLoggedInUserName] = useState("")
-
-
-
+const Form = () => {
+  const [isLogInSuccessful, setIsLogInSuccessful] = useState(false);
+  const [loggedInUserName, setLoggedInUserName] = useState("");
 
   const formik = useFormik({
     initialValues: {
@@ -49,9 +45,9 @@ const Form = (values) => {
     },
     validate,
     onSubmit: (values) => {
-        setIsLogInSuccessful(true)
-        setLoggedInUserName(values.userName)
-    }
+      setIsLogInSuccessful(true);
+      setLoggedInUserName(values.userName);
+    },
   });
   return (
     <>
