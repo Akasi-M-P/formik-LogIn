@@ -55,60 +55,61 @@ const Form = (values) => {
   });
   return (
     <>
-    {isLogInSuccessful ? ( <>
-    <h1 className="welcome__message">Welcome, {loggedInUserName}</h1>
-    <img className="welcome__Img" src="/src/assets/welcome.jpg" alt=""/>
-    </>) : (
+      {isLogInSuccessful ? (
+        <>
+          <h1 className="welcome__message">Welcome, {loggedInUserName}</h1>
+          <img className="welcome__Img" src="/assets/welcome.jpg" alt="" />
+        </>
+      ) : (
         <main className="main__Container">
-      <form onSubmit={formik.handleSubmit} className="form__Container">
-        <h1 className="form__Header">Log In</h1>
-        <label htmlFor="userName">Username</label>
-        <input
-          id="userName"
-          name="userName"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.userName}
-        />
-        {formik.touched.userName && formik.errors.userName ? (
-          <div className="errors">{formik.errors.userName}</div>
-        ) : null}
+          <form onSubmit={formik.handleSubmit} className="form__Container">
+            <h1 className="form__Header">Log In</h1>
+            <label htmlFor="userName">Username</label>
+            <input
+              id="userName"
+              name="userName"
+              type="text"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.userName}
+            />
+            {formik.touched.userName && formik.errors.userName ? (
+              <div className="errors">{formik.errors.userName}</div>
+            ) : null}
 
-        <label htmlFor="email">Email Address</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.email}
-        />
-        {formik.touched.email && formik.errors.email ? (
-          <div className="errors">{formik.errors.email}</div>
-        ) : null}
+            <label htmlFor="email">Email Address</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
+            />
+            {formik.touched.email && formik.errors.email ? (
+              <div className="errors">{formik.errors.email}</div>
+            ) : null}
 
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          name="password"
-          type="password"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.password}
-        />
-        {formik.touched.password && formik.errors.password ? (
-          <div className="errors">{formik.errors.password}</div>
-        ) : null}
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.password}
+            />
+            {formik.touched.password && formik.errors.password ? (
+              <div className="errors">{formik.errors.password}</div>
+            ) : null}
 
-        <button className="submit__Btn" type="submit">
-          Submit
-        </button>
-      </form>
-      <img className="logIn__Img" src="/src/assets/login.jpg" alt="login" />
-    </main>
-
-    )}
+            <button className="submit__Btn" type="submit">
+              Submit
+            </button>
+          </form>
+          <img className="logIn__Img" src="/assets/login.jpg" alt="login" />
+        </main>
+      )}
     </>
   );
 };

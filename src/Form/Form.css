@@ -96,7 +96,7 @@ form input:focus {
 @media all and (max-width: 540px) {
     .main__Container {
         display: block;
-        background-image: url("/src/assets/login.jpg");
+        background-image: url("/public/assets/login.jpg");
         background-size: cover;
     }
 
