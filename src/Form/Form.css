@@ -98,6 +98,7 @@ form input:focus {
         display: block;
         background-image: url("/public/assets/login.jpg");
         background-size: cover;
+        overflow: hidden;
     }
 
     .logIn__Img {
@@ -108,8 +109,9 @@ form input:focus {
     display: flex;
     flex-direction: column;
     width: 90%;
-    height: 300px;
-    margin: 10px auto;
+    height: 500px;
+    margin: 20px auto;
+    padding: 0 10px;
     }
 
 
